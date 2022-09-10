@@ -1,0 +1,18 @@
+lx-low_level_programming, cd 0x01-variables_if_else_while, then echo 'File name'>README.md
+Touch 0-positive_or_negative.c
+Vi 0-positive_or_negative.c
+Put the script inside
+Cat 0-positive_or_negative.c
+Chmod u+x 0-positive_or_negative.c
+Git add.
+Git commit -m"The filename"
+Git pushThen use cd alx-low level, mkdir ur 0x01-variables_if_else_while, 
+Type ur cd alx-low_level_programming, cd 0x01-variables_if_else_while, then echo 'File name'>README.md
+Touch 0-positive_or_negative.c
+Vi 0-positive_or_negative.c
+Put the script inside
+Cat 0-positive_or_negative.c
+Chmod u+x 0-positive_or_negative.c
+Git add.
+Git commit -m"The filename"
+Git push
