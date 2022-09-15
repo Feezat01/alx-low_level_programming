@@ -1,9 +1,10 @@
-nclude "main.h"
+#include "main.h"
 /**
- *  main  prints putchar
+ *  main - prints _putchar followed by new line
  *
- *  Return: always 0
+ *  Return: 0 (success)
  */
+
 int main(void)
 {
 _putchar('_');
@@ -14,6 +15,6 @@ _putchar('c');
 _putchar('h');
 _putchar('a');
 _putchar('r');
-_putchar('\n);
+_putchar('\n');
 return (0);
 }
