@@ -1,16 +1,11 @@
-#include "main.h"
+#include  <unstd.h>
 
 /**
- *   print_alphabet - function to print abc
- * 
- *   Return: 0.
+ * _putchar - write the character c to stdout
+ * @c: The character to print
+ *
+ * Return: on success 1
+ * On error, -1 is returned, and errno is set appropriately. 
  */
-void print_alphabet(void);
+int _putchar(char. c)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
-{
-_putchar(c);
-}
-_putchar('\n');
-}
