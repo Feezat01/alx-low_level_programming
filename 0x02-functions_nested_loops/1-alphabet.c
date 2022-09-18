@@ -1,13 +1,15 @@
 #include "main.h"
 
-/**
- *   print_alphabet - function to print abc
- *
- *   Return: 0.
+/*
+ * main - check the code
+ * C program to prints the alphabet,
+ * Return: Always 0.
  */
+
 void print_alphabet(void);
 {
 char c;
+
 for (c = 'a'; c <= 'z'; c++)
 {
 _putchar(c);
