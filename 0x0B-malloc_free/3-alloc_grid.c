@@ -29,7 +29,7 @@ for (j = 0; j < i; j++)
 free(matrix[j]);
 free(matrix);
 return (NULL);
-}		
+}
 }
 for (i = 0; i < height; i++)
 for (j = 0; j < width; j++)
