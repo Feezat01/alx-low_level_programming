@@ -1,45 +1,40 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "3-calc.h"
 
 /**
- *  main - Principal
- *
- *  @ac: count arguments
- *  @ag: array
- *
- *  Return: Always 0
+ *  main - operates two numbers.
+ *  @argc: argument counter.
+ *  @argv: argument vector.
+ *  Return: result, otherwise 98 for arg error, 99 for op, error 100 for divide
+ *  or multiply by 0
  */
 
-int main(int arc, char *arg[])
+int main(int argc, char **argv)
 {
-int num1, num2, (*operate)(int, int);
+int num1, num2, answer;
+int (*function)(int, int);
 
-if (arc != 4)
+if (argc != 4)
 {
-printf("Error\n");
+puts("Error");
 exit(98);
 }
-if ((*arg[2] != '+' &&
-*arg[2] != '-' &&
-*arg[2] != '/' &&
-*arg[2] != '*' &&
-*arg[2] != '%')
-|| arg[2][1] != '\0')
+
+if (argv[2][1] != '\0')
 {
-printf("Error\n");
+puts("Error");
 exit(99);
 }
 
-num1 = atoi(arg[1]);
-num2 = atoi(arg[3]);
-if ((*arg[2] == '/' || *arg[2] == '%') && (num2 == 0))
+function = get_op_func(*(argv + 2));
+if (!function)
 {
-printf("Error\n");
-exit(100);
+puts("Error");
+exit(99);
 }
-operate = get_op_func(arg[2]);
-printf("%d\n", operate(num1, num2));
-return (0);
 
+num1 = atoi(argv[1]);
+num2 = atoi(argv[3]);
+answer = function(num1, num2);
+printf("%d\n", answer);
+return (0);
 }
