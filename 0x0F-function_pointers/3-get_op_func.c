@@ -1,12 +1,11 @@
-#include <stdlib.h>
 #include "3-calc.h"
+
 /**
- *  get_op_func - get funtion
- *
- *  @s: pointer to funtion
- *
- *  Return: Integer
+ *  get_op_func - compares the struct and proceed to operates.
+ *  @s: operator string.
+ *  Return: result.
  */
+
 int (*get_op_func(char *s))(int, int)
 {
 op_t ops[] = {
@@ -15,13 +14,15 @@ op_t ops[] = {
 {"*", op_mul},
 {"/", op_div},
 {"%", op_mod},
-{NULL, NULL},
+{NULL, NULL}
 };
-int i = 0;
+int i;
+
+i = 0;
 
 while (i < 5)
 {
-if (*(ops[i]).op == *s)
+if (*s == *ops[i].op)
 return (ops[i].f);
 i++;
 }
